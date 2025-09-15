@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Ventana de Cambio - Claro Colombia</title>
+    <style>
+        body { font-family: Arial; background-color: #fff; color: #333; }
+        h1 { color: red; }
+        label, select, input { margin: 10px 0; display: block; }
+        .resultado { margin-top: 20px; padding: 10px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Ventana de Cambio - Claro Colombia</h1>
+    <label for='ciudad'>Ciudad:</label>
+    <select id='ciudad'>
+        <option value=''>Seleccione una ciudad</option>
+        <option value='ACACIAS'>ACACIAS</option>
+        <option value='AGUACHICA'>AGUACHICA</option>
+        <option value='AGUAZUL'>AGUAZUL</option>
+        <option value='AGUSTIN CODAZZI'>AGUSTIN CODAZZI</option>
+        <option value='ANDALUCIA'>ANDALUCIA</option>
+        <option value='ANSERMA'>ANSERMA</option>
+        <option value='APARTADO'>APARTADO</option>
+        <option value='ARACATACA'>ARACATACA</option>
+        <option value='ARAUCA'>ARAUCA</option>
+        <option value='ARJONA'>ARJONA</option>
+        <option value='ARMENIA'>ARMENIA</option>
+        <option value='BARANOA'>BARANOA</option>
+        <option value='BARBOSA'>BARBOSA</option>
+        <option value='BARRANCABERMEJA'>BARRANCABERMEJA</option>
+        <option value='BARRANQUILLA'>BARRANQUILLA</option>
+        <option value='BELLO'>BELLO</option>
+        <option value='BOJACA'>BOJACA</option>
+        <option value='BOSCONIA'>BOSCONIA</option>
+        <option value='BUCARAMANGA'>BUCARAMANGA</option>
+        <option value='BUENAVENTURA'>BUENAVENTURA</option>
+        <option value='BUGALAGRANDE'>BUGALAGRANDE</option>
+        <option value='Bogota'>Bogota</option>
+        <option value='CAICEDONIA'>CAICEDONIA</option>
+        <option value='CAJICA'>CAJICA</option>
+        <option value='CALARCA'>CALARCA</option>
+        <option value='CALI'>CALI</option>
+        <option value='CANDELARIA'>CANDELARIA</option>
+        <option value='CAREPA'>CAREPA</option>
+        <option value='CARMEN DE BOLIVAR'>CARMEN DE BOLIVAR</option>
+        <option value='CARTAGENA DE INDIAS'>CARTAGENA DE INDIAS</option>
+        <option value='CARTAGO'>CARTAGO</option>
+        <option value='CAUCASIA'>CAUCASIA</option>
+        <option value='CERETE'>CERETE</option>
+        <option value='CHIA'>CHIA</option>
+        <option value='CHIGORODO'>CHIGORODO</option>
+        <option value='CHINCHINA'>CHINCHINA</option>
+        <option value='CHINU'>CHINU</option>
+        <option value='CHIQUINQUIRA'>CHIQUINQUIRA</option>
+        <option value='CHIRIGUANA'>CHIRIGUANA</option>
+        <option value='CHOCONTA'>CHOCONTA</option>
+        <option value='CIENAGA'>CIENAGA</option>
+        <option value='CIENAGA DE ORO'>CIENAGA DE ORO</option>
+        <option value='CIRCASIA'>CIRCASIA</option>
+        <option value='COPACABANA'>COPACABANA</option>
+        <option value='COROZAL'>COROZAL</option>
+        <option value='COTA'>COTA</option>
+        <option value='CUCUTA'>CUCUTA</option>
+        <option value='CUMARAL'>CUMARAL</option>
+        <option value='CURUMANI'>CURUMANI</option>
+        <option value='DAGUA'>DAGUA</option>
+        <option value='DOSQUEBRADAS'>DOSQUEBRADAS</option>
+        <option value='DUITAMA'>DUITAMA</option>
+        <option value='EL BANCO'>EL BANCO</option>
+        <option value='EL CARMEN DE VIBORAL'>EL CARMEN DE VIBORAL</option>
+        <option value='EL CERRITO'>EL CERRITO</option>
+        <option value='EL COPEY'>EL COPEY</option>
+        <option value='EL ROSAL'>EL ROSAL</option>
+        <option value='EL SANTUARIO'>EL SANTUARIO</option>
+        <option value='ENVIGADO'>ENVIGADO</option>
+        <option value='ESPINAL'>ESPINAL</option>
+        <option value='FACATATIVA'>FACATATIVA</option>
+        <option value='FLORIDA'>FLORIDA</option>
+        <option value='FLORIDABLANCA'>FLORIDABLANCA</option>
+        <option value='FONSECA'>FONSECA</option>
+        <option value='FUNDACION'>FUNDACION</option>
+        <option value='FUNZA'>FUNZA</option>
+        <option value='FUSAGASUGA'>FUSAGASUGA</option>
+        <option value='GACHANCIPA'>GACHANCIPA</option>
+        <option value='GALAPA'>GALAPA</option>
+        <option value='GINEBRA'>GINEBRA</option>
+        <option value='GIRARDOT'>GIRARDOT</option>
+        <option value='GIRARDOTA'>GIRARDOTA</option>
+        <option value='GIRON'>GIRON</option>
+        <option value='GRANADA'>GRANADA</option>
+        <option value='GUACARI'>GUACARI</option>
+        <option value='GUADUAS'>GUADUAS</option>
+        <option value='GUARNE'>GUARNE</option>
+        <option value='GUASCA'>GUASCA</option>
+        <option value='IBAGUE'>IBAGUE</option>
+        <option value='IPIALES'>IPIALES</option>
+        <option value='ITAGUI'>ITAGUI</option>
+        <option value='JAMUNDI'>JAMUNDI</option>
+        <option value='LA CALERA'>LA CALERA</option>
+        <option value='LA CEJA'>LA CEJA</option>
+        <option value='LA DORADA'>LA DORADA</option>
+        <option value='LA ESTRELLA'>LA ESTRELLA</option>
+        <option value='LA JAGUA DE IBIRICO'>LA JAGUA DE IBIRICO</option>
+        <option value='LA MESA'>LA MESA</option>
+        <option value='LA PAZ'>LA PAZ</option>
+        <option value='LA TEBAIDA'>LA TEBAIDA</option>
+        <option value='LA UNION'>LA UNION</option>
+        <option value='LA VIRGINIA'>LA VIRGINIA</option>
+        <option value='LORICA'>LORICA</option>
+        <option value='LOS PATIOS'>LOS PATIOS</option>
+        <option value='MADRID'>MADRID</option>
+        <option value='MAGANGUE'>MAGANGUE</option>
+        <option value='MAICAO'>MAICAO</option>
+        <option value='MALAMBO'>MALAMBO</option>
+        <option value='MANIZALES'>MANIZALES</option>
+        <option value='MARINILLA'>MARINILLA</option>
+        <option value='MEDELLIN'>MEDELLIN</option>
+        <option value='MOMPOS'>MOMPOS</option>
+        <option value='MONTELIBANO'>MONTELIBANO</option>
+        <option value='MONTENEGRO'>MONTENEGRO</option>
+        <option value='MONTERIA'>MONTERIA</option>
+        <option value='MOSQUERA'>MOSQUERA</option>
+        <option value='NEIVA'>NEIVA</option>
+        <option value='OCAÑA'>OCAÑA</option>
+        <option value='PAIPA'>PAIPA</option>
+        <option value='PALERMO'>PALERMO</option>
+        <option value='PALMAR DE VARELA'>PALMAR DE VARELA</option>
+        <option value='PALMIRA'>PALMIRA</option>
+        <option value='PAMPLONA'>PAMPLONA</option>
+        <option value='PASTO'>PASTO</option>
+        <option value='PEREIRA'>PEREIRA</option>
+        <option value='PIEDECUESTA'>PIEDECUESTA</option>
+        <option value='PLANETA RICA'>PLANETA RICA</option>
+        <option value='PLATO'>PLATO</option>
+        <option value='POLONUEVO'>POLONUEVO</option>
+        <option value='POPAYAN'>POPAYAN</option>
+        <option value='PRADERA'>PRADERA</option>
+        <option value='PUERTO BERRIO'>PUERTO BERRIO</option>
+        <option value='PUERTO COLOMBIA'>PUERTO COLOMBIA</option>
+        <option value='PUERTO LOPEZ'>PUERTO LOPEZ</option>
+        <option value='QUIMBAYA'>QUIMBAYA</option>
+        <option value='RESTREPO'>RESTREPO</option>
+        <option value='RICAURTE'>RICAURTE</option>
+        <option value='RIOHACHA'>RIOHACHA</option>
+        <option value='RIONEGRO'>RIONEGRO</option>
+        <option value='ROLDANILLO'>ROLDANILLO</option>
+        <option value='SABANA DE TORRES'>SABANA DE TORRES</option>
+        <option value='SABANAGRANDE'>SABANAGRANDE</option>
+        <option value='SABANALARGA'>SABANALARGA</option>
+        <option value='SABANETA'>SABANETA</option>
+        <option value='SAHAGUN'>SAHAGUN</option>
+        <option value='SAMPUES'>SAMPUES</option>
+        <option value='SAN GIL'>SAN GIL</option>
+        <option value='SAN JUAN DEL CESAR'>SAN JUAN DEL CESAR</option>
+        <option value='SAN JUAN NEPOMUCENO'>SAN JUAN NEPOMUCENO</option>
+        <option value='SAN MARCOS'>SAN MARCOS</option>
+        <option value='SAN MARTIN'>SAN MARTIN</option>
+        <option value='SANTA MARTA'>SANTA MARTA</option>
+        <option value='SANTA ROSA DE CABAL'>SANTA ROSA DE CABAL</option>
+        <option value='SANTA ROSA DE OSOS'>SANTA ROSA DE OSOS</option>
+        <option value='SANTANDER DE QUILICHAO'>SANTANDER DE QUILICHAO</option>
+        <option value='SANTO TOMAS'>SANTO TOMAS</option>
+        <option value='SEVILLA'>SEVILLA</option>
+        <option value='SIBATE'>SIBATE</option>
+        <option value='SINCELEJO'>SINCELEJO</option>
+        <option value='SOACHA'>SOACHA</option>
+        <option value='SOCORRO'>SOCORRO</option>
+        <option value='SOGAMOSO'>SOGAMOSO</option>
+        <option value='SOLEDAD'>SOLEDAD</option>
+        <option value='SOPO'>SOPO</option>
+        <option value='SUESCA'>SUESCA</option>
+        <option value='TABIO'>TABIO</option>
+        <option value='TAURAMENA'>TAURAMENA</option>
+        <option value='TENJO'>TENJO</option>
+        <option value='TIERRALTA'>TIERRALTA</option>
+        <option value='TOCANCIPA'>TOCANCIPA</option>
+        <option value='TULUA'>TULUA</option>
+        <option value='TUNJA'>TUNJA</option>
+        <option value='TUQUERRES'>TUQUERRES</option>
+        <option value='TURBACO'>TURBACO</option>
+        <option value='TURBO'>TURBO</option>
+        <option value='UBATE'>UBATE</option>
+        <option value='URIBIA'>URIBIA</option>
+        <option value='VALLEDUPAR'>VALLEDUPAR</option>
+        <option value='VILLA DE LEIVA'>VILLA DE LEIVA</option>
+        <option value='VILLA DEL ROSARIO'>VILLA DEL ROSARIO</option>
+        <option value='VILLAMARIA'>VILLAMARIA</option>
+        <option value='VILLAVICENCIO'>VILLAVICENCIO</option>
+        <option value='VILLETA'>VILLETA</option>
+        <option value='VIOTA'>VIOTA</option>
+        <option value='YARUMAL'>YARUMAL</option>
+        <option value='YOPAL'>YOPAL</option>
+        <option value='YUMBO'>YUMBO</option>
+        <option value='ZARZAL'>ZARZAL</option>
+        <option value='ZIPAQUIRA'>ZIPAQUIRA</option>
+
+    </select>
+    <div class='resultado' id='info'></div>
+    <script>
+        const datos = {
+            'ACACIAS': { operador: 'INTEGRA', lead: 2 },
+            'AGUACHICA': { operador: 'LECTA', lead: 3 },
+            'AGUAZUL': { operador: 'Logytech Mobile Mobile', lead: 2 },
+            'AGUSTIN CODAZZI': { operador: 'LECTA', lead: 3 },
+            'ANDALUCIA': { operador: 'Cali express', lead: 3 },
+            'ANSERMA': { operador: 'ESM LOGISTICA', lead: 2 },
+            'APARTADO': { operador: 'Cali express', lead: 3 },
+            'ARACATACA': { operador: 'LECTA', lead: 2 },
+            'ARAUCA': { operador: 'Logytech Mobile Mobile', lead: 1 },
+            'ARJONA': { operador: 'LECTA', lead: 3 },
+            'ARMENIA': { operador: 'Logytech Mobile Mobile', lead: 1 },
+            'BARANOA': { operador: 'LECTA', lead: 3 },
+            'BARBOSA': { operador: 'INTEGRA', lead: 2 },
+            'BARRANCABERMEJA': { operador: 'INTEGRA', lead: 2 },
+            'BARRANQUILLA': { operador: 'Logytech Mobile Mobile', lead: 1 },
+            'BELLO': { operador: 'Cali express', lead: 1 },
+            'BOJACA': { operador: 'Cali express', lead: 2 },
+            'BOSCONIA': { operador: 'LECTA', lead: 3 },
+            'BUCARAMANGA': { operador: 'INTEGRA', lead: 1 },
+            'BUENAVENTURA': { operador: 'Cali express', lead: 1 },
+            'BUGALAGRANDE': { operador: 'Cali express', lead: 2 },
+            'Bogota': { operador: 'INTEGRA', lead: 1 },
+            'CAICEDONIA': { operador: 'Cali express', lead: 3 },
+            'CAJICA': { operador: 'Cali express', lead: 2 },
+            'CALARCA': { operador: 'Logytech Mobile Mobile', lead: 3 },
+            'CALI': { operador: 'Cali express', lead: 1 },
+            'CANDELARIA': { operador: 'Logytech Mobile Mobile', lead: 1 },
+            'CAREPA': { operador: 'Cali express', lead: 3 },
+            'CARMEN DE BOLIVAR': { operador: 'LECTA', lead: 3 },
+            'CARTAGENA DE INDIAS': { operador: 'LECTA', lead: 1 },
+            'CARTAGO': { operador: 'Cali express', lead: 1 },
+            'CAUCASIA': { operador: 'Cali express', lead: 3 },
+            'CERETE': { operador: 'LECTA', lead: 2 },
+            'CHIA': { operador: 'INTEGRA', lead: 2 },
+            'CHIGORODO': { operador: 'ESM LOGISTICA', lead: 2 },
+            'CHINCHINA': { operador: 'Cali express', lead: 2 },
+            'CHINU': { operador: 'LECTA', lead: 3 },
+            'CHIQUINQUIRA': { operador: 'INTEGRA', lead: 2 },
+            'CHIRIGUANA': { operador: 'LECTA', lead: 3 },
+            'CHOCONTA': { operador: 'Cali express', lead: 2 },
+            'CIENAGA': { operador: 'LECTA', lead: 2 },
+            'CIENAGA DE ORO': { operador: 'LECTA', lead: 3 },
+            'CIRCASIA': { operador: 'Logytech Mobile Mobile', lead: 3 },
+            'COPACABANA': { operador: 'Cali express', lead: 2 },
+            'COROZAL': { operador: 'LECTA', lead: 3 },
+            'COTA': { operador: 'INTEGRA', lead: 2 },
+            'CUCUTA': { operador: 'INTEGRA', lead: 1 },
+            'CUMARAL': { operador: 'ESM LOGISTICA', lead: 2 },
+            'CURUMANI': { operador: 'LECTA', lead: 3 },
+            'DAGUA': { operador: 'ESM LOGISTICA', lead: 2 },
+            'DOSQUEBRADAS': { operador: 'Cali express', lead: 1 },
+            'DUITAMA': { operador: 'INTEGRA', lead: 2 },
+            'EL BANCO': { operador: 'LECTA', lead: 3 },
+            'EL CARMEN DE VIBORAL': { operador: 'Cali express', lead: 3 },
+            'EL CERRITO': { operador: 'Cali express', lead: 2 },
+            'EL COPEY': { operador: 'LECTA', lead: 3 },
+            'EL ROSAL': { operador: 'INTEGRA', lead: 2 },
+            'EL SANTUARIO': { operador: 'Cali express', lead: 3 },
+            'ENVIGADO': { operador: 'Cali express', lead: 1 },
+            'ESPINAL': { operador: 'Logytech Mobile Mobile', lead: 3 },
+            'FACATATIVA': { operador: 'INTEGRA', lead: 2 },
+            'FLORIDA': { operador: 'Cali express', lead: 2 },
+            'FLORIDABLANCA': { operador: 'INTEGRA', lead: 1 },
+            'FONSECA': { operador: 'LECTA', lead: 3 },
+            'FUNDACION': { operador: 'LECTA', lead: 2 },
+            'FUNZA': { operador: 'Cali express', lead: 1 },
+            'FUSAGASUGA': { operador: 'Cali express', lead: 2 },
+            'GACHANCIPA': { operador: 'Cali express', lead: 2 },
+            'GALAPA': { operador: 'LECTA', lead: 3 },
+            'GINEBRA': { operador: 'Cali express', lead: 2 },
+            'GIRARDOT': { operador: 'Cali express', lead: 2 },
+            'GIRARDOTA': { operador: 'Cali express', lead: 2 },
+            'GIRON': { operador: 'Logytech Mobile Mobile', lead: 1 },
+            'GRANADA': { operador: 'INTEGRA', lead: 2 },
+            'GUACARI': { operador: 'ESM LOGISTICA', lead: 2 },
+            'GUADUAS': { operador: 'Cali express', lead: 2 },
+            'GUARNE': { operador: 'Cali express', lead: 2 },
+            'GUASCA': { operador: 'Cali express', lead: 2 },
+            'IBAGUE': { operador: 'Logytech Mobile Mobile', lead: 1 },
+            'IPIALES': { operador: 'ESM LOGISTICA', lead: 2 },
+            'ITAGUI': { operador: 'Cali express', lead: 1 },
+            'JAMUNDI': { operador: 'Cali express', lead: 1 },
+            'LA CALERA': { operador: 'INTEGRA', lead: 2 },
+            'LA CEJA': { operador: 'Cali express', lead: 3 },
+            'LA DORADA': { operador: 'Cali express', lead: 3 },
+            'LA ESTRELLA': { operador: 'Cali express', lead: 1 },
+            'LA JAGUA DE IBIRICO': { operador: 'LECTA', lead: 3 },
+            'LA MESA': { operador: 'INTEGRA', lead: 2 },
+            'LA PAZ': { operador: 'LECTA', lead: 2 },
+            'LA TEBAIDA': { operador: 'Logytech Mobile Mobile', lead: 3 },
+            'LA UNION': { operador: 'Cali express', lead: 3 },
+            'LA VIRGINIA': { operador: 'Cali express', lead: 3 },
+            'LORICA': { operador: 'LECTA', lead: 3 },
+            'LOS PATIOS': { operador: 'INTEGRA', lead: 2 },
+            'MADRID': { operador: 'INTEGRA', lead: 2 },
+            'MAGANGUE': { operador: 'ESM LOGISTICA', lead: 2 },
+            'MAICAO': { operador: 'LECTA', lead: 3 },
+            'MALAMBO': { operador: 'LECTA', lead: 3 },
+            'MANIZALES': { operador: 'Cali express', lead: 1 },
+            'MARINILLA': { operador: 'ESM LOGISTICA', lead: 2 },
+            'MEDELLIN': { operador: 'Cali express', lead: 1 },
+            'MOMPOS': { operador: 'ESM LOGISTICA', lead: 2 },
+            'MONTELIBANO': { operador: 'LECTA', lead: 3 },
+            'MONTENEGRO': { operador: 'ESM LOGISTICA', lead: 2 },
+            'MONTERIA': { operador: 'LECTA', lead: 1 },
+            'MOSQUERA': { operador: 'INTEGRA', lead: 2 },
+            'NEIVA': { operador: 'INTEGRA', lead: 1 },
+            'OCAÑA': { operador: 'INTEGRA', lead: 3 },
+            'PAIPA': { operador: 'INTEGRA', lead: 2 },
+            'PALERMO': { operador: 'Logytech Mobile Mobile', lead: 2 },
+            'PALMAR DE VARELA': { operador: 'LECTA', lead: 3 },
+            'PALMIRA': { operador: 'Cali express', lead: 1 },
+            'PAMPLONA': { operador: 'ESM LOGISTICA', lead: 2 },
+            'PASTO': { operador: 'Logytech Mobile Mobile', lead: 1 },
+            'PEREIRA': { operador: 'Cali express', lead: 1 },
+            'PIEDECUESTA': { operador: 'Logytech Mobile Mobile', lead: 1 },
+            'PLANETA RICA': { operador: 'LECTA', lead: 3 },
+            'PLATO': { operador: 'LECTA', lead: 2 },
+            'POLONUEVO': { operador: 'LECTA', lead: 3 },
+            'POPAYAN': { operador: 'Logytech Mobile Mobile', lead: 1 },
+            'PRADERA': { operador: 'ESM LOGISTICA', lead: 2 },
+            'PUERTO BERRIO': { operador: 'Cali express', lead: 3 },
+            'PUERTO COLOMBIA': { operador: 'LECTA', lead: 3 },
+            'PUERTO LOPEZ': { operador: 'INTEGRA', lead: 2 },
+            'QUIMBAYA': { operador: 'Logytech Mobile Mobile', lead: 3 },
+            'RESTREPO': { operador: 'Cali express', lead: 3 },
+            'RICAURTE': { operador: 'Cali express', lead: 3 },
+            'RIOHACHA': { operador: 'LECTA', lead: 1 },
+            'RIONEGRO': { operador: 'Cali express', lead: 2 },
+            'ROLDANILLO': { operador: 'Cali express', lead: 2 },
+            'SABANA DE TORRES': { operador: 'INTEGRA', lead: 3 },
+            'SABANAGRANDE': { operador: 'LECTA', lead: 3 },
+            'SABANALARGA': { operador: 'Cali express', lead: 3 },
+            'SABANETA': { operador: 'Cali express', lead: 1 },
+            'SAHAGUN': { operador: 'LECTA', lead: 3 },
+            'SAMPUES': { operador: 'LECTA', lead: 3 },
+            'SAN GIL': { operador: 'INTEGRA', lead: 2 },
+            'SAN JUAN DEL CESAR': { operador: 'LECTA', lead: 3 },
+            'SAN JUAN NEPOMUCENO': { operador: 'LECTA', lead: 3 },
+            'SAN MARCOS': { operador: 'LECTA', lead: 3 },
+            'SAN MARTIN': { operador: 'ESM LOGISTICA', lead: 2 },
+            'SANTA MARTA': { operador: 'LECTA', lead: 1 },
+            'SANTA ROSA DE CABAL': { operador: 'Cali express', lead: 2 },
+            'SANTA ROSA DE OSOS': { operador: 'Cali express', lead: 3 },
+            'SANTANDER DE QUILICHAO': { operador: 'ESM LOGISTICA', lead: 2 },
+            'SANTO TOMAS': { operador: 'LECTA', lead: 3 },
+            'SEVILLA': { operador: 'Cali express', lead: 3 },
+            'SIBATE': { operador: 'Cali express', lead: 2 },
+            'SINCELEJO': { operador: 'Logytech Mobile Mobile', lead: 1 },
+            'SOACHA': { operador: 'Cali express', lead: 1 },
+            'SOCORRO': { operador: 'INTEGRA', lead: 3 },
+            'SOGAMOSO': { operador: 'INTEGRA', lead: 2 },
+            'SOLEDAD': { operador: 'LECTA', lead: 1 },
+            'SOPO': { operador: 'INTEGRA', lead: 2 },
+            'SUESCA': { operador: 'Cali express', lead: 2 },
+            'TABIO': { operador: 'INTEGRA', lead: 2 },
+            'TAURAMENA': { operador: 'Logytech Mobile Mobile', lead: 3 },
+            'TENJO': { operador: 'Cali express', lead: 1 },
+            'TIERRALTA': { operador: 'LECTA', lead: 3 },
+            'TOCANCIPA': { operador: 'INTEGRA', lead: 2 },
+            'TULUA': { operador: 'Cali express', lead: 1 },
+            'TUNJA': { operador: 'INTEGRA', lead: 1 },
+            'TUQUERRES': { operador: 'Cali express', lead: 3 },
+            'TURBACO': { operador: 'LECTA', lead: 3 },
+            'TURBO': { operador: 'Cali express', lead: 3 },
+            'UBATE': { operador: 'INTEGRA', lead: 2 },
+            'URIBIA': { operador: 'LECTA', lead: 3 },
+            'VALLEDUPAR': { operador: 'LECTA', lead: 1 },
+            'VILLA DE LEIVA': { operador: 'INTEGRA', lead: 3 },
+            'VILLA DEL ROSARIO': { operador: 'INTEGRA', lead: 2 },
+            'VILLAMARIA': { operador: 'Cali express', lead: 1 },
+            'VILLAVICENCIO': { operador: 'INTEGRA', lead: 1 },
+            'VILLETA': { operador: 'INTEGRA', lead: 2 },
+            'VIOTA': { operador: 'Cali express', lead: 2 },
+            'YARUMAL': { operador: 'Cali express', lead: 3 },
+            'YOPAL': { operador: 'Logytech Mobile Mobile', lead: 1 },
+            'YUMBO': { operador: 'Cali express', lead: 1 },
+            'ZARZAL': { operador: 'Cali express', lead: 3 },
+            'ZIPAQUIRA': { operador: 'Cali express', lead: 2 },
+
+        };
+        document.getElementById('ciudad').addEventListener('change', function() {
+            const ciudad = this.value;
+            const info = document.getElementById('info');
+            if (datos[ciudad]) {
+                const hoy = new Date();
+                const entrega = new Date(hoy);
+                entrega.setDate(hoy.getDate() + datos[ciudad].lead);
+                const cambio = new Date(entrega);
+                cambio.setDate(entrega.getDate() + 1);
+                function formatDate(d) {
+                    return d.toISOString().split('T')[0];
+                }
+                info.innerHTML = `
+                    <strong>Ciudad:</strong> ${ciudad}<br>
+                    <strong>Lead time:</strong> ${datos[ciudad].lead} días<br>
+                    <strong>Fecha de Entrega:</strong> ${formatDate(entrega)}<br>
+                    <strong>Ventana de Cambio:</strong> ${formatDate(cambio)}<br>
+                    <strong>Operador recomendado:</strong> ${datos[ciudad].operador}
+                `;
+            } else {
+                info.innerHTML = '';
+            }
+        });
+    </script>
+</body>
+</html>
